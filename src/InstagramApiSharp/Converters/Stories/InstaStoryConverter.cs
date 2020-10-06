@@ -35,7 +35,7 @@ namespace InstagramApiSharp.Converters
                 VideoDuration = SourceObject.VideoDuration ?? 0,
                 SupportsReelReactions = SourceObject.SupportsReelReactions,
                 HasSharedToFb = SourceObject.HasSharedToFb,
-                ImportedTakenAt = SourceObject.ImportedTakenAt.FromUnixTimeSeconds()
+                ImportedTakenAt = SourceObject.ImportedTakenAt.FromUnixTimeSeconds(),
             };
 
             if (SourceObject.StoryHashtags != null)

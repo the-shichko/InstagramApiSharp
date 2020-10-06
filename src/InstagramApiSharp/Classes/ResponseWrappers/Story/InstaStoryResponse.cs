@@ -52,12 +52,6 @@ namespace InstagramApiSharp.Classes.ResponseWrappers
         [JsonProperty("story_hashtags")] public List<InstaReelMentionResponse> StoryHashtags { get; set; }
         [JsonProperty("story_locations")] public List<InstaStoryLocation> StoryLocation { get; set; }
 
-
         [JsonProperty("show_one_tap_fb_share_tooltip")] public bool ShowOneTapFbShareTooltip { get; set; }
-
-
-
-
-
     }
 }
