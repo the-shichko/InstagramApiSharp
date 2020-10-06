@@ -51,7 +51,8 @@ namespace InstagramApiSharp.Converters
                 ViewerCount = SourceObject.ViewerCount ?? 0,
                 TotalViewerCount = SourceObject.TotalViewerCount ?? 0,
                 ViewerCursor = SourceObject.ViewerCursor,
-                HasSharedToFb = SourceObject.HasSharedToFb ?? 0
+                HasSharedToFb = SourceObject.HasSharedToFb ?? 0,
+                Audience = SourceObject.Audience ?? null
             };
 
             if (SourceObject.User != null)

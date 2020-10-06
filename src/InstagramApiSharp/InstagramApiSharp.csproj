@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net452;uap10.0;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;netcoreapp3.1</TargetFrameworks>
     <VersionPrefix>1.5.0</VersionPrefix>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <AssemblyName>InstagramApiSharp</AssemblyName>
@@ -14,6 +14,7 @@
     <Version>1.5.0.1</Version>
     <AssemblyVersion>1.5.0.1</AssemblyVersion>
     <FileVersion>1.5.0.1</FileVersion>
+    <PackageIcon>mishku.comlogo.png</PackageIcon>
     <Description>A complete Private Instagram API for .NET.
 
 
@@ -198,20 +199,19 @@ v1.3.3.0
     <Copyright>Ramtin Jokar</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>C#, Instagram, Insta, Client, Sharp, InstagramApiSharp, Client, Api, media, video, album, photo, igtv</PackageTags>
-    <PackageIconUrl>http://s9.picofile.com/file/8336165642/insta5.png</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   
    <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
         <TargetFramework>netstandard2.0;netstandard1.3</TargetFramework>
     </PropertyGroup>
-    <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-      <TargetFrameworks>netstandard2.0;net452;uap10.0;netstandard1.3</TargetFrameworks>
-    </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <TreatSpecificWarningsAsErrors />
+    <OutputPath>bin\Debug\net452\netstandard2.0\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
@@ -219,6 +219,10 @@ v1.3.3.0
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="C:\Users\the_shichko\Desktop\mishku.comlogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="LICENSE.txt" Pack="true" Visible="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
   
@@ -254,7 +258,9 @@ v1.3.3.0
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>

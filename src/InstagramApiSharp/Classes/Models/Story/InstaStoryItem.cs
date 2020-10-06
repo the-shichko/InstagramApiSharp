@@ -122,5 +122,7 @@ namespace InstagramApiSharp.Classes.Models
         public List<InstaComment> PreviewComments { get; set; } = new List<InstaComment>();
 
         public List<InstaStoryCountdownItem> Countdowns { get; set; } = new List<InstaStoryCountdownItem>();
+        
+        public string Audience { get; set; }
     }
 }
